@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Giovana Alves — Estética Facial</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="#">
+        <!-- Fallback inline logo (stylized leaf) -->
+        <svg width="42" height="42" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M4 20c4-6 8-6 10-10 1.5-3 3-4 4-5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>Giovana Alves</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-list">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#contato" class="btn btn-outline">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <h1>Giovana Alves</h1>
+          <p class="subtitle">Estética facial · Resultados naturais · Atendimento personalizado</p>
+
+          <p>Sou especialista em estética facial com 8 anos de experiência ajudando clientes a sentirem-se mais confiantes e equilibrados. Utilizo técnicas modernas e materiais de alta qualidade, sempre com foco em segurança e naturalidade.</p>
+
+          <div class="cta-row">
+            <a href="#contato" class="btn">Agendar uma consulta</a>
+            <a href="#servicos" class="btn btn-outline">Ver serviços</a>
+          </div>
+
+          <div class="badges">
+            <span>Atendimento presencial</span>
+            <span>Horário flexível</span>
+            <span>Produtos veganos</span>
+          </div>
+        </div>
+
+        <aside class="hero-photo">
+          <!-- Using user's uploaded JPG in project root if present; fallback to svg in assets -->
+          <picture>
+            <source srcset="minhafotoprofissional.JPG" type="image/jpeg">
+            <img src="assets/minhafotoprofissional.svg" alt="Foto profissional de Giovana Alves" loading="lazy" />
+          </picture>
+        </aside>
+      </div>
+    </section>
+
+    <section id="sobre" class="sobre container">
+      <div class="sobre-grid">
+        <div class="sobre-card">
+          <h2>Sobre mim</h2>
+          <p>Olá! Eu sou Giovana — terapeuta e especialista em estética facial. Meu foco é entender as necessidades individuais de cada pessoa e aplicar tratamentos com resultado harmônico e elegante. Possuo formação em estética avançada, cursos de especialização em cuidados faciais e atendimento humanizado.</p>
+
+          <ul>
+            <li><strong>Formação:</strong> Estética e Cosmética, Cursos Avançados em Terapias Faciais</li>
+            <li><strong>Experiência:</strong> 8 anos de prática profissional</li>
+            <li><strong>Especialidades:</strong> Harmonização facial suave, tratamento de pele sensível, rejuvenescimento</li>
+          </ul>
+
+          <p class="small">Informações fictícias — substitua por seus dados reais quando quiser.</p>
+        </div>
+
+        <div class="sobre-aside">
+          <div class="logo-grid">
+            <img class="logo-img" src="simbolo%20logo.png" alt="Logo 1" onerror="this.onerror=null;this.src='assets/logo-1.svg'" loading="lazy"/>
+            <img class="logo-img" src="simbolo%20mais%20tipografia.png" alt="Logo 2" onerror="this.onerror=null;this.src='assets/logo-2.svg'" loading="lazy"/>
+            <img class="logo-img" src="simbolo%20mais%20tipografia%20logo%20arredondada.png" alt="Logo 3" onerror="this.onerror=null;this.src='assets/logo-3.svg'" loading="lazy"/>
+          </div>
+
+          <div class="contact-card">
+            <h3>Contato</h3>
+            <p>WhatsApp: <a href="https://wa.me/5511999999999">(11) 99999-9999</a></p>
+            <p>Email: <a href="mailto:contato@giovanaalves.com.br">contato@giovanaalves.com.br</a></p>
+            <a id="contato" href="#" class="btn">Enviar mensagem</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Giovana Alves · Estética Facial</p>
+    </div>
+  </footer>
+
+  <script>
+    // Small script to toggle mobile nav and update year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const toggle = document.querySelector('.nav-toggle');
+    const navList = document.querySelector('.nav-list');
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      navList.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
